@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Filing standard
+    url: https://github.com/asianlegacylibrary/all-bot-engine/blob/main/docs/ISSUES.md
+    about: The fields every issue carries, and how to write the body.

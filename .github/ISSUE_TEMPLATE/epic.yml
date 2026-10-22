@@ -1,0 +1,38 @@
+name: Epic
+description: A group of related issues. Epics are the only issues without a parent.
+title: "[Epic] "
+type: Epic
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Follow the [filing standard](https://github.com/asianlegacylibrary/all-bot-engine/blob/main/docs/ISSUES.md).
+        After filing, set **Priority**, **Assignee**, and **Status** in the repo's home project, then add the child issues as sub-issues.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What this group of issues achieves, and why.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status
+      description: One line, kept current. Edit it as the state changes.
+      value: "**Status:** planning."
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: What has to be true for this epic to close.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope

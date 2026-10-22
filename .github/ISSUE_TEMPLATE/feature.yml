@@ -1,0 +1,47 @@
+name: Feature
+description: New functionality or an improvement. Set Parent, Priority and the project Status after filing.
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Follow the [filing standard](https://github.com/asianlegacylibrary/all-bot-engine/blob/main/docs/ISSUES.md).
+        After filing, set **Parent** (an Epic), **Priority**, **Assignee**, and **Status** in the repo's home project.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What it is and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status
+      description: One line, kept current. Edit it as the state changes.
+      value: "**Status:** proposed."
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach
+      description: Short; leave room for the implementer. Include the contract (endpoint, parameters, response shape) where there is one.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Each item independently checkable. Split by owner (API, frontend, data) when more than one is involved.
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+  - type: textarea
+    id: related
+    attributes:
+      label: Related
+      description: Issues and PRs, by number.

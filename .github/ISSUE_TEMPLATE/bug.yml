@@ -1,0 +1,49 @@
+name: Bug
+description: Something behaves wrongly. Set Parent, Priority and the project Status after filing.
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Follow the [filing standard](https://github.com/asianlegacylibrary/all-bot-engine/blob/main/docs/ISSUES.md).
+        After filing, set **Parent** (an Epic), **Priority**, **Assignee**, and **Status** in the repo's home project.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong, and who it affects.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status
+      description: One line, kept current. Edit it as the state changes.
+      value: "**Status:** reported, not yet investigated."
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Real requests or clicks, with environment (dev, staging, production).
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Actual vs expected
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ]
+  - type: textarea
+    id: related
+    attributes:
+      label: Related
+      description: Issues and PRs, by number.

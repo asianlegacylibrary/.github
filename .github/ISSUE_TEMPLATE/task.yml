@@ -1,0 +1,41 @@
+name: Task
+description: A specific piece of work that isn't a bug or a feature. Set Parent, Priority and the project Status after filing.
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Follow the [filing standard](https://github.com/asianlegacylibrary/all-bot-engine/blob/main/docs/ISSUES.md).
+        After filing, set **Parent** (an Epic), **Priority**, **Assignee**, and **Status** in the repo's home project.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs doing and why.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status
+      description: One line, kept current. Edit it as the state changes.
+      value: "**Status:** not started."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+  - type: textarea
+    id: related
+    attributes:
+      label: Related
+      description: Issues and PRs, by number.
